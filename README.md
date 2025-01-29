@@ -18,7 +18,7 @@ The **Love Calculator** is a fun project that predicts the compatibility between
 3. View the love percentage!
 
 ## 🎯 Live Demo
-[Click here to try it!](#)
+[Click here to try it!](#https://lovator-e0ffd9vcs-asims-projects-b10f5705.vercel.app)
 
 ---
 💙 Enjoy and have fun!
