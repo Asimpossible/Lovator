@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="lovator.css" />
+    <title>Lovator - Love Calculator</title>
+  </head>
+  <body>
+    <div class="lovator">
+      <div class="title one">
+        <h2><span>Love</span> <span>Calculator</span></h2>
+      </div>
+      <form class="two">
+        <div class="inputDiv">
+          <div class="input__container input__container1">
+            <div class="shadow__input"></div>
+            <input
+              type="text"
+              name="username"
+              class="input__search input1"
+              placeholder="Enter your name"
+            />
+          </div>
+          <div class="input__container input__container2">
+            <div class="shadow__input"></div>
+            <input
+              type="text"
+              name="username"
+              class="input__search input2"
+              placeholder="Enter your partner's name"
+            />
+          </div>
+        </div>
+        <button disabled onclick="calculatingResult(event)">Calculate</button>
+      </form>
+      <span class="resultInfo three">
+        This is your Love Degree:
+        <span class="result"></span>
+      </span>
+    </div>
+  </body>
+  <script src="./lovator.js"></script>
+</html>

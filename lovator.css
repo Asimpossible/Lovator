@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f2f3f0;
+}
+.lovator {
+  padding: 80px 0;
+  border: solid blueviolet;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Title */
+.one {
+  border: solid red;
+  width: 100%;
+  cursor: default;
+  font-size: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2 span:nth-child(1) {
+  color: #293f58;
+}
+
+h2 span:nth-child(2) {
+  color: red;
+}
+
+/* Form */
+.two {
+  border: solid green;
+  width: 80rem;
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+}
+
+.inputDiv {
+  border: 4px solid cyan;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.input__container {
+  cursor: pointer;
+  position: relative;
+  background: #f0f0f0;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  border: 4px solid #000;
+  width: 450px;
+  max-width: 100%;
+  transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  transform-style: preserve-3d;
+  transform: rotateX(10deg) rotateY(-10deg);
+  perspective: 1000px;
+  box-shadow: 10px 10px 0 #000;
+}
+
+.input__container:hover {
+  transform: rotateX(5deg) rotateY(1 deg) scale(1.05);
+  box-shadow: 25px 25px 0 -5px #ba3232, 25px 25px 0 0 #000;
+}
+
+.shadow__input {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transform: translateZ(-50px);
+  background: linear-gradient(
+    45deg,
+    rgba(255, 107, 107, 0.4) 0%,
+    rgba(255, 107, 107, 0.1) 100%
+  );
+  filter: blur(20px);
+}
+
+.input__button__shadow {
+  cursor: pointer;
+  border: 3px solid #000;
+  background: #e9b50b;
+  transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  transform: translateZ(20px);
+  position: relative;
+  z-index: 3;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.input__search {
+  width: 100%;
+  outline: none;
+  border: 3px solid #000;
+  padding: 15px;
+  font-size: 22px;
+  background: #fff;
+  color: #000;
+  transform: translateZ(5px);
+  transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+  z-index: 3;
+  font-family: "Roboto", Arial, sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.input__search::placeholder {
+  color: #666;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.input__search:hover,
+.input__search:focus {
+  background: #f0f0f0;
+  transform: translateZ(7px) translateX(-5px) translateY(-5px);
+  box-shadow: 5px 5px 0 0 #000;
+}
+
+.input__container1::before {
+  content: "Your Name";
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background: rgba(41, 63, 88);
+  color: #f0f0f0;
+  font-weight: bold;
+  padding: 5px 10px;
+  font-size: 19px;
+  transform: translateZ(50px);
+  z-index: 4;
+  border: 2px solid #000;
+}
+
+.input__container2::before {
+  content: "Your Partner's Name";
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background: rgba(41, 63, 88);
+  color: #f0f0f0;
+  font-weight: bold;
+  padding: 5px 10px;
+  font-size: 19px;
+  transform: translateZ(50px);
+  z-index: 4;
+  border: 2px solid #000;
+}
+
+label {
+  font-family: monospace;
+  font-size: 23px;
+}
+
+label:nth-child(1) {
+  color: #021931;
+  font-weight: 500;
+}
+
+input {
+  border-top: none;
+  width: 20rem;
+  padding: 4px 5px;
+  height: 22px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .input__container {
+    margin-left: 405px;
+    width: 450px;
+    transform: rotateX(5deg) rotateY(0deg); /* Simplify effects for small screens */
+    padding: 15px;
+  }
+
+  .input__container:hover {
+    transform: none; /* Disable scaling for simplicity on small screens */
+    box-shadow: none;
+  }
+}
+
+/* Calculate Button */
+button {
+  width: 30rem;
+  margin: 0 auto;
+  --green: #ba3232;
+  font-size: 28px;
+  padding: 0.7em 2.7em;
+  letter-spacing: 0.06em;
+  position: relative;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border-radius: 0.6em;
+  overflow: hidden;
+  transition: all 0.3s;
+  line-height: 1.4em;
+  border: 2px solid var(--green);
+  background: linear-gradient(
+    to right,
+    rgba(186, 50, 50, 0.1) 1%,
+    transparent 40%,
+    transparent 60%,
+    rgba(186, 50, 50, 0.1) 100%
+  );
+  color: var(--green);
+  box-shadow: inset 0 0 10px rgba(186, 50, 50, 0.4),
+    0 0 9px 3px rgba(186, 50, 50, 0.1);
+}
+
+button:hover {
+  color: #ba3232;
+  box-shadow: inset 0 0 10px rgba(186, 50, 50, 0.6),
+    0 0 9px 3px rgba(186, 50, 50, 0.2);
+  cursor: pointer;
+}
+
+button:before {
+  content: "";
+  position: absolute;
+  left: -4em;
+  width: 4em;
+  height: 100%;
+  top: 0;
+  transition: transform 0.4s ease-in-out;
+  background: linear-gradient(
+    to right,
+    transparent 1%,
+    rgba(186, 50, 50, 0.1) 40%,
+    rgba(186, 50, 50, 0.1) 60%,
+    transparent 100%
+  );
+}
+
+button:hover:before {
+  transform: translateX(896.35px);
+}
+
+/* Result Section */
+.three {
+  border: solid darkcyan;
+}
+
+.resultInfo {
+  font-size: 2rem;
+  font-family: monospace;
+  color: #021931;
+  cursor: default;
+}
+
+.result {
+  font-size: 35px;
+  font-weight: bold;
+  color: #ba3232;
+  cursor: default;
+}
