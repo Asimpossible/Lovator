@@ -8,17 +8,15 @@ body {
 }
 .lovator {
   padding: 80px 0;
-  border: solid blueviolet;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 45px;
   justify-content: center;
   align-items: center;
 }
 
 /* Title */
 .one {
-  border: solid red;
   width: 100%;
   cursor: default;
   font-size: 44px;
@@ -39,7 +37,6 @@ h2 span:nth-child(2) {
 
 /* Form */
 .two {
-  border: solid green;
   width: 80rem;
   display: flex;
   flex-direction: column;
@@ -47,7 +44,6 @@ h2 span:nth-child(2) {
 }
 
 .inputDiv {
-  border: 4px solid cyan;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -259,10 +255,6 @@ button:hover:before {
 }
 
 /* Result Section */
-.three {
-  border: solid darkcyan;
-}
-
 .resultInfo {
   font-size: 2rem;
   font-family: monospace;
