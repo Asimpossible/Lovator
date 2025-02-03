@@ -12,7 +12,7 @@ function loveCalculation() {
 
 function calculatingResult(event) {
   event.preventDefault();
-  result.textContent = loveCalculation();
+  result.textContent = loveCalculation() + "%";
   submitButton.disabled = true;
 }
 
